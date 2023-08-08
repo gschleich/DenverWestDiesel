@@ -47,7 +47,6 @@ nav a:hover {
   width: fit-content;
   border-radius: 10px;
   background-color: whitesmoke;
-  display: flex;
 }
 
 .aboutborder {
@@ -55,6 +54,7 @@ nav a:hover {
   background-color: whitesmoke;
   width: auto;
   height: auto;
+  padding-bottom: 50px;
 }
 
 /* e41124 red */
@@ -89,8 +89,10 @@ nav a:hover {
 
 .about img {
   width: 60%;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
   height: auto;
-  padding-bottom: 50px;
 }
 
 .main {
