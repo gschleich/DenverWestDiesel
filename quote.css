@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+}
+
+header {
+  color: #ad2d2e;
+  padding: 10px;
+}
+
+nav {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  padding-left: 10px;
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #ad2d2e;
+}
+
+.horizontal-menu {
+  width: fit-content;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  display: flex;
+}
+
+.survey {
+  height: auto;
+  border-radius: 10px;
+  background-color: rgba(245, 245, 245, 0.9); /* whitesmoke RGB */
+}
+
+nav a,
+nav a:hover,
+nav a:active,
+nav a:visited {
+  color: #ad2d2e;
+}
+
+.main {
+  /* background-image: url("red.jpg"); */
+  background-image: url("open_hoods.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ad2d2e;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.main h1 {
+  font-size: 48px;
+  margin: 20px 0;
+  font-weight: bolder;
+}
+
+.main p {
+  font-size: 32px;
+}
+
+.services {
+  padding-top: 50px;
+  display: table;
+  width: 100%;
+  height: 600px;
+  background-color: #333;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.services h2 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.services li {
+  margin-bottom: 10px;
+}
+
+.contact {
+  height: 350px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.contact h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+footer a,
+footer a:hover,
+footer a:active,
+footer a:visited {
+  color: whitesmoke;
+}

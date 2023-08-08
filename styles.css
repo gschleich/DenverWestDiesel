@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #333;
+}
+
+header {
+  display: absolute;
+  color: #fff;
+  padding: 10px;
+}
+
+nav {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.logo img {
+  padding-top: 50px;
+  max-width: 90%;
+  height: auto;
+}
+
+.main {
+  /* background-image: url("red.jpg"); */
+  background-image: url("evolution-of-diesel.jpg");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.main h1 {
+  font-size: 48px;
+  margin: 20px 0;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.main p {
+  font-size: 38px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.slideshow {
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  background-color: #333;
+}
+
+.w3-slideshow {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.w3-slideshow img {
+  border-radius: 20px;
+}
+
+.services {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  color: #fff;
+  background-color: #333;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.info {
+  width: 90%;
+  background-color: #555;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.services h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services ul {
+  font-size: 38px;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.services li {
+  margin-bottom: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.contact {
+  height: auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav a,
+nav a:hover,
+nav a:active,
+nav a:visited {
+  color: whitesmoke;
+}

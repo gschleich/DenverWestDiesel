@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+img {
+  padding-top: 50px;
+}
+
+.main {
+  /* background-image: url("red.jpg"); */
+  background-image: url("evolution-of-diesel.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.main h1 {
+  font-size: 48px;
+  margin: 20px 0;
+  font-weight: bolder;
+}
+
+.main p {
+  font-size: 32px;
+}
+
+.services {
+  padding-top: 50px;
+  display: table;
+  width: 100%;
+  height: 600px;
+  background-color: #333;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+}
+
+.services h2 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.services li {
+  margin-bottom: 10px;
+}
+
+.contact {
+  height: 350px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.contact h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: whitesmoke;
+}
+
+section {
+  color: #fff;
+  text-align: center;
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+}
+
+.left-half {
+  /* the left/right is causing a weird horizontal scroll wheel bug */
+  position: absolute;
+  left: 0px;
+  width: 50%;
+  padding-top: 575px;
+}
+
+.left-half img {
+  position: flex;
+}
+
+.right-half {
+  padding-top: 500px;
+  font-size: 36px;
+  position: absolute;
+  right: 0px;
+  width: 50%;
+}
+
+.right-half h1 {
+  color: #fff;
+  text-align: center;
+  padding-right: 200px;
+  padding-top: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.right-half ul {
+  /* gets rid of bullet points */
+  background-color: gray;
+  list-style-type: none;
+  text-align: center;
+  text-indent: -40px;
+  border-style: solid;
+  border-radius: 50px;
+  border-width: 5px;
+  border-color: grey;
+  width: 75%;
+}
+
+.right-half li {
+  color: #fff;
+  margin: 30px 0;
+  margin-left: 35px;
+}

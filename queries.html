@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Form</title>
+  <link rel="stylesheet" type="text/css" href="query.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Online Form</h2>
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="vehicle">Vehicle Type:</label>
+      <input type="text" id="vehicle" name="vehicle" required>
+
+      <label for="description">Problem Description/Service Needed:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="other">Other:</label>
+      <textarea id="other" name="other" rows="2"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
