@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denver West Diesel</title>
+    <link rel="icon" type="image/png" href="assets/DenverD.png">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#hero" class="logo-link">
+          <div class="logo">
+           <img src="assets/DWD.png" alt="Denver West Diesel Logo" />
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <a href="#contact" class="btn nav-btn">Get a Quote</a>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="mobile-nav">
+        <a href="#hero">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#contact" class="btn">Get a Quote</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <h1>DENVER WEST DIESEL</h1>
+          <p>Your one-stop shop for diesel services!</p>
+          <a href="#services" class="btn">Our Services</a>
+        </div>
+      </section>
+
+      <section id="why-us">
+        <h2 class="reveal">Why Choose Us?</h2>
+        <div class="why-us-container">
+            <div class="feature reveal">
+                <i class="fas fa-star"></i>
+                <h3>Exceptional Quality</h3>
+                <p>We are focused on providing our clients with the highest level of quality and excellent customer support.</p>
+            </div>
+            <div class="feature reveal">
+                <i class="fas fa-wrench"></i>
+                <h3>Experienced Technicians</h3>
+                <p>Our team of highly skilled and experienced mechanics are committed to delivering top-notch engine work.</p>
+            </div>
+            <div class="feature reveal">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Free Quote</h3>
+                <p>Get a fair and transparent estimate for your repairs. No hidden fees, no obligations.</p>
+            </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about-container reveal">
+          <div class="about-image reveal">
+            <iframe
+              width="100%"
+              height="100%"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Denver%20West%20Diesel&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+          <div class="about-text">
+            <h2>Our Story</h2>
+            <p>
+              Since 2014, Denver West Diesel has set the standard for excellence in diesel engine maintenance and repair. Our highly skilled technicians leverage years of experience and cutting-edge diagnostics to provide a full spectrum of services, from routine fleet care to intricate custom projects. Conveniently located just minutes from downtown, we are committed to delivering superior results and exceptional service that keeps your operations running at peak performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <h2 class="reveal">Our Services</h2>
+        <div class="accordion-container reveal">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">
+                <i class="fas fa-cogs"></i>
+                Engine Diagnostics & Repairs
+              </span>
+              <i class="fas fa-plus accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Our state-of-the-art diagnostic tools allow us to accurately identify and repair any issues with your diesel engine.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">
+                <i class="fas fa-truck-moving"></i>
+                Vocational System Diagnostics & Repairs
+              </span>
+              <i class="fas fa-plus accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>We specialize in the complex vocational systems of heavy-duty trucks, ensuring everything runs smoothly.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">
+                <i class="fas fa-shield-alt"></i>
+                Preventative Maintenance
+              </span>
+              <i class="fas fa-plus accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Keep your fleet on the road with our comprehensive preventative maintenance services, tailored to your needs.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">
+                <i class="fas fa-bolt"></i>
+                Power Equipment
+              </span>
+              <i class="fas fa-plus accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>We service and repair a wide range of power equipment to keep your business running at full capacity.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">
+                <i class="fas fa-car-battery"></i>
+                Electrical Troubleshooting
+              </span>
+              <i class="fas fa-plus accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Our expert technicians can diagnose and fix any electrical issues, from simple wiring to complex computer systems.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">
+                <i class="fas fa-plus-circle"></i>
+                And More!
+              </span>
+              <i class="fas fa-plus accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>We offer a wide range of other services. Contact us to find out how we can help you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2 class="reveal">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item reveal">
+                <h3>How long will it take to fix my car?</h3>
+                <p>Depending on what the issue is, it could be fixed in a day or take over a week for a major job. Once we diagnose your car, we will be able to give you a better estimate for how long the repair will take.</p>
+            </div>
+            <div class="faq-item reveal">
+                <h3>Do I need to make an appointment?</h3>
+                <p>It is highly recommended that you make an appointment. We are an independent auto repair center and we pride ourselves on our quality work and might be completely booked.</p>
+            </div>
+            <div class="faq-item reveal">
+                <h3>Do you have a warranty?</h3>
+                <p>Yes, we certainly do. We stand behind our work and offer a competitive warranty on all our repairs. Please ask for more details.</p>
+            </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <h2 class="reveal">What Our Customers Say</h2>
+        <div class="testimonial-container">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-author">
+              <img src="assets/maleplaceholder.png" alt="Tony">
+              <div>
+                <h3>Tony</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <blockquote>
+              <p>"Always above and beyond excellent service! Lower than the big guys, and they seem to really give the trucks a good once over to find other issues or problems that may exist or occur! Thanks To Brandon, Lucky, Chris, and the rest of the team!"</p>
+            </blockquote>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-author">
+              <img src="assets/femaleplaceholder.png" alt="Kepha Jones">
+              <div>
+                <h3>Kepha Jones</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <blockquote>
+              <p>"These guys are awesome. Chris and Zach were extremely helpful, knowledgeable, and expedient in their services. All the gents were top notch in service and experience. Highly recommend!"</p>
+            </blockquote>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-author">
+              <img src="assets/femaleplaceholder.png" alt="Jo Campbell">
+              <div>
+                <h3>Jo Campbell</h3>
+                <div class="stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <blockquote>
+              <p>"As a female traveling in my short skoolie with my 10 year-old son, it was important I felt comfortable with the shop, the staff, and the location. Denver West checked all the boxes, I got my skoolie in top shape, and they did it quickly and for a fair price."</p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="quote-section">
+        <div class="quote-container reveal">
+          <h2>DWD Quote Form</h2>
+          <p class="form-intro">Please complete the following information to request a quote from Denver West Diesel. Quote is subject to change. For better quote accuracy we may ask you to bring your vehicle into the shop for further diagnosis.</p>
+      
+          <form id="quote-form" class="quote-form">
+            <fieldset>
+              <legend>Your Information</legend>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="first-name" class="required">First Name</label>
+                  <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="input-group">
+                  <label for="last-name" class="required">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="phone" class="required">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="input-group">
+                  <label for="email" class="required">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+            </fieldset>
+      
+            <fieldset class="vehicle-info">
+              <legend>Vehicle Information</legend>
+              <p class="form-helper-text">The difference between the make and model of a vehicle is that make refers to the brand of the vehicle, while model refers to the specific vehicle model. Using the example of a Nissan Altima, Nissan is the make, while Altima is the model.</p>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="make" class="required">Make</label>
+                  <input type="text" id="make" name="make" required>
+                </div>
+                <div class="input-group">
+                  <label for="model" class="required">Model</label>
+                  <input type="text" id="model" name="model" required>
+                </div>
+                <div class="input-group">
+                  <label for="year" class="required">Year of Manufacture</label>
+                  <input type="number" id="year" name="year" min="1900" max="2099" step="1" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="vin">VIN (Vehicle Identification Number)</label>
+                  <input type="text" id="vin" name="vin">
+                </div>
+                <div class="input-group">
+                  <label for="engine-serial">Engine Serial Number</label>
+                  <input type="text" id="engine-serial" name="engine-serial">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group full-width">
+                  <label for="problem" class="required">Problem Description (Service Needed)</label>
+                  <textarea id="problem" name="problem" rows="4" required></textarea>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group full-width">
+                  <label for="other">Other:</label>
+                  <textarea id="other" name="other" rows="4"></textarea>
+                </div>
+              </div>
+            </fieldset>
+      
+            <button type="submit" class="btn">GET A QUOTE</button>
+          </form>
+      
+          <p class="form-outro">We may contact you in order to gather more information about your quote.</p>
+        </div>
+      </section>
+    
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Denver West Diesel. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
