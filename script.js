@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
+    const topBar = document.querySelector('.top-bar');
+
+    const hero = document.getElementById('hero');
+    const heroImages = [
+        'assets/open_hoods.jpg',
+        'assets/white_truck.jpg',
+        'assets/trucks_side.jpg',
+        'assets/shop_vehicles.jpg'
+    ];
+    let currentImageIndex = 0;
+
+    function changeHeroImage() {
+        currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+        hero.style.backgroundImage = `url(${heroImages[currentImageIndex]})`;
+    }
+
+    setInterval(changeHeroImage, 5000);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            topBar.style.zIndex = '999';
+        } else {
+            topBar.style.zIndex = '1001';
+        }
+    });
 
     function setBodyPadding() {
         const navbarHeight = navbar.offsetHeight;
@@ -23,6 +48,38 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileNav.classList.remove('open');
         });
     });
+
+    const readMoreBtn = document.getElementById('read-more-btn');
+    const moreText = document.getElementById('more-text');
+
+    readMoreBtn.addEventListener('click', () => {
+        const isExpanded = moreText.classList.toggle('show');
+        readMoreBtn.classList.toggle('open');
+        if (isExpanded) {
+            readMoreBtn.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+            moreText.style.maxHeight = moreText.scrollHeight + 'px';
+        } else {
+            readMoreBtn.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+            moreText.style.maxHeight = null;
+        }
+    });
+
+    const showMoreFaqBtn = document.getElementById('show-more-faq');
+    const hiddenFaqs = document.querySelectorAll('[data-faq-hidden]');
+
+    showMoreFaqBtn.addEventListener('click', () => {
+        const isShowing = showMoreFaqBtn.textContent.includes('Less');
+
+        hiddenFaqs.forEach(faq => {
+            faq.style.display = isShowing ? 'none' : 'block';
+        });
+
+        if (isShowing) {
+            showMoreFaqBtn.textContent = 'Show More';
+        } else {
+            showMoreFaqBtn.textContent = 'Show Less';
+        }
+    });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -32,8 +89,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            let scrollTarget = targetElement;
+            if (targetId === '#about') {
+                scrollTarget = document.querySelector('#about h2');
+            } else if (targetId === '#services') {
+                scrollTarget = document.querySelector('#services h2');
+            }
+
+            let targetPosition;
+            if (targetId === '#hero') {
+                targetPosition = 0;
+            } else {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                targetPosition = scrollTarget.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+            }
             
             window.scrollTo({
                 top: targetPosition,
@@ -99,6 +168,77 @@ accordionItems.forEach(item => {
         }
     });
 }); 
+
+/* Testimonials Carousel */
+function setupTestimonialCarousel() {
+    const carouselWrapper = document.querySelector('.testimonial-carousel-wrapper');
+    if (!carouselWrapper) return;
+
+    const carousel = carouselWrapper.querySelector('.testimonial-container');
+    const prevBtn = carouselWrapper.querySelector('.carousel-arrow.prev');
+    const nextBtn = carouselWrapper.querySelector('.carousel-arrow.next');
+    const dotsContainer = carouselWrapper.querySelector('.carousel-dots');
+    
+    let slides;
+    let currentIndex = 0;
+    let totalSlides = 0;
+    let isMobile = false;
+
+    function init() {
+        isMobile = window.innerWidth <= 992;
+        
+        if (isMobile) {
+            slides = Array.from(carousel.querySelectorAll('.testimonial-card'));
+        } else {
+            slides = Array.from(carousel.querySelectorAll('.testimonial-slide'));
+        }
+        
+        totalSlides = slides.length;
+        
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+        
+        goToSlide(0);
+    }
+
+    function updateDots() {
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function goToSlide(slideIndex) {
+        currentIndex = slideIndex;
+        const offset = -currentIndex * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
+        updateDots();
+    }
+    
+    prevBtn.addEventListener('click', () => {
+        goToSlide((currentIndex - 1 + totalSlides) % totalSlides);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        goToSlide((currentIndex + 1) % totalSlides);
+    });
+
+    init();
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            init();
+        }, 250);
+    });
+}
+setupTestimonialCarousel();
 
 /* Supabase Form Submission */
 const supabaseUrl = 'https://frtpfvfnajkpdiwhwbvy.supabase.co';
