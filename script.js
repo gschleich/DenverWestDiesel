@@ -36,17 +36,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.querySelector('.mobile-nav');
+    const overlay = document.querySelector('.overlay');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('open');
         mobileNav.classList.toggle('open');
+        overlay.classList.toggle('show');
     });
 
     mobileNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('open');
             mobileNav.classList.remove('open');
+            overlay.classList.remove('show');
         });
+    });
+
+    overlay.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        overlay.classList.remove('show');
     });
 
     const readMoreBtn = document.getElementById('read-more-btn');
@@ -80,6 +89,22 @@ document.addEventListener('DOMContentLoaded', function() {
             showMoreFaqBtn.textContent = 'Show Less';
         }
     });
+
+    /* Design Switcher */
+    const designSwitcher = document.querySelector('.design-switcher');
+    if (designSwitcher) {
+        const switcherToggle = designSwitcher.querySelector('.switcher-toggle');
+        switcherToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            designSwitcher.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!designSwitcher.contains(event.target)) {
+                designSwitcher.classList.remove('open');
+            }
+        });
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

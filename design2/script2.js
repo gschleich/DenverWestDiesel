@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('section');
     const backToTopBtn = document.querySelector('.back-to-top-btn');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-links');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+        });
+    }
 
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
@@ -19,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+
+            if (navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+            }
         });
     });
 
@@ -82,6 +94,20 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         activateLinkOnScroll();
         toggleBackToTopButton();
+    });
+
+    /* Design Switcher */
+    const designSwitcher = document.querySelector('.design-switcher');
+    const switcherToggle = document.querySelector('.switcher-toggle');
+
+    switcherToggle.addEventListener('click', () => {
+        designSwitcher.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!designSwitcher.contains(event.target)) {
+            designSwitcher.classList.remove('open');
+        }
     });
 
 }); 

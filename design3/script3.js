@@ -88,6 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
         });
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                }
+            });
+        });
     }
 
     // --- Active Nav Link on Scroll ---
@@ -110,4 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /* Design Switcher */
+    const designSwitcher = document.querySelector('.design-switcher');
+    if (designSwitcher) {
+        const switcherToggle = designSwitcher.querySelector('.switcher-toggle');
+        switcherToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            designSwitcher.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!designSwitcher.contains(event.target)) {
+                designSwitcher.classList.remove('open');
+            }
+        });
+    }
 }); 
