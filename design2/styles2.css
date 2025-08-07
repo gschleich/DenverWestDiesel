@@ -389,7 +389,7 @@ footer a {
 /* Back to Top Button */
 .back-to-top-btn {
     position: fixed;
-    bottom: 20px;
+    bottom: 90px;
     right: 20px;
     background-color: var(--primary-red);
     color: var(--white);
@@ -401,6 +401,7 @@ footer a {
     align-items: center;
     text-decoration: none;
     font-size: 1.5rem;
+    z-index: 1001;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
