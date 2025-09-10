@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
         'assets/open_hoods.jpg',
         'assets/white_truck.jpg',
         'assets/trucks_side.jpg',
-        'assets/shop_vehicles.jpg'
+        'assets/shop_vehicles.jpg',
+        'assets/Mechanical1.png',
+        'assets/Mechanical2.png',
+        'assets/Mechanical3.png',
+        'assets/Mechanical4.png',
+        'assets/Mechanical5.png'
     ];
     let currentImageIndex = 0;
 
@@ -90,21 +95,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    /* Design Switcher */
-    const designSwitcher = document.querySelector('.design-switcher');
-    if (designSwitcher) {
-        const switcherToggle = designSwitcher.querySelector('.switcher-toggle');
-        switcherToggle.addEventListener('click', (event) => {
-            event.stopPropagation();
-            designSwitcher.classList.toggle('open');
-        });
+    /* Back to Top Button */
+    const backToTopBtn = document.querySelector('.back-to-top-btn');
+    
+    const toggleBackToTopButton = () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    };
 
-        document.addEventListener('click', (event) => {
-            if (!designSwitcher.contains(event.target)) {
-                designSwitcher.classList.remove('open');
-            }
-        });
-    }
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Attach scroll event listener for back to top button
+    window.addEventListener('scroll', toggleBackToTopButton);
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
