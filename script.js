@@ -15,13 +15,34 @@ document.addEventListener('DOMContentLoaded', function() {
         'assets/Mechanical5.png'
     ];
     let currentImageIndex = 0;
+    let imagesLoaded = 0;
+
+    // Preload all hero images to prevent blank flashes
+    function preloadImages() {
+        heroImages.forEach((imageSrc, index) => {
+            const img = new Image();
+            img.onload = () => {
+                imagesLoaded++;
+                if (imagesLoaded === heroImages.length) {
+                    console.log('All hero images preloaded successfully');
+                }
+            };
+            img.src = imageSrc;
+        });
+    }
+
+    // Start preloading images immediately
+    preloadImages();
 
     function changeHeroImage() {
         currentImageIndex = (currentImageIndex + 1) % heroImages.length;
         hero.style.backgroundImage = `url(${heroImages[currentImageIndex]})`;
     }
 
-    setInterval(changeHeroImage, 5000);
+    // Start carousel after a short delay to ensure images are preloaded
+    setTimeout(() => {
+        setInterval(changeHeroImage, 5000);
+    }, 1000);
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
