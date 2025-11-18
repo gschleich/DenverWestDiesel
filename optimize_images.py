@@ -11,17 +11,17 @@ import sys
 # Images to optimize with their usage context
 IMAGES_TO_OPTIMIZE = {
     # Hero carousel images (large background images)
-    'open_hoods.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'white_truck.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'trucks_side.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'shop_vehicles.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'Mechanical1.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'Mechanical2.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'Mechanical3.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'Mechanical4.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
-    'Mechanical5.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1024},
+    'open_hoods.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'white_truck.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'trucks_side.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'shop_vehicles.jpg': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'Mechanical1.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'Mechanical2.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'Mechanical3.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'Mechanical4.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
+    'Mechanical5.png': {'type': 'hero', 'web_width': 1920, 'mobile_width': 1440},
     # About section image
-    'DWDTeamEdit.png': {'type': 'content', 'web_width': 1400, 'mobile_width': 1024},
+    'DWDTeamEdit.png': {'type': 'content', 'web_width': 1400, 'mobile_width': 1280},
     # Logo
     'DWDaltlogo4.png': {'type': 'logo', 'web_width': 400, 'mobile_width': 300},
     # Favicon
@@ -119,10 +119,10 @@ def main():
         web_quality = 90 if config['type'] == 'hero' else 85
         optimize_image(input_path, web_path, config['web_width'], quality=web_quality, format=web_format)
         
-        # Mobile version (higher quality for better visual experience)
+        # Mobile version (very high quality for excellent visual experience)
         mobile_filename = os.path.splitext(filename)[0] + mobile_ext
         mobile_path = os.path.join(mobile_dir, mobile_filename)
-        mobile_quality = 88 if config['type'] == 'hero' else 85
+        mobile_quality = 95 if config['type'] == 'hero' else 92
         optimize_image(input_path, mobile_path, config['mobile_width'], quality=mobile_quality, format=mobile_format)
         
         print()
