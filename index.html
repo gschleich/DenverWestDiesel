@@ -4,24 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Denver West Diesel</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/DenverD.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/DenverD.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/web/DenverD.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/web/DenverD.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!-- Preload hero carousel images to prevent blank flashes -->
-    <link rel="preload" as="image" href="assets/open_hoods.jpg">
-    <link rel="preload" as="image" href="assets/white_truck.jpg">
-    <link rel="preload" as="image" href="assets/trucks_side.jpg">
-    <link rel="preload" as="image" href="assets/shop_vehicles.jpg">
-    <link rel="preload" as="image" href="assets/Mechanical1.png">
-    <link rel="preload" as="image" href="assets/Mechanical2.png">
-    <link rel="preload" as="image" href="assets/Mechanical3.png">
-    <link rel="preload" as="image" href="assets/Mechanical4.png">
-    <link rel="preload" as="image" href="assets/Mechanical5.png">
+    <!-- Preload hero carousel images to prevent blank flashes (responsive versions) -->
+    <link rel="preload" as="image" href="assets/mobile/open_hoods.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/open_hoods.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/white_truck.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/white_truck.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/trucks_side.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/trucks_side.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/shop_vehicles.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/shop_vehicles.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/Mechanical1.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/Mechanical1.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/Mechanical2.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/Mechanical2.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/Mechanical3.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/Mechanical3.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/Mechanical4.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/Mechanical4.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/mobile/Mechanical5.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/web/Mechanical5.webp" media="(min-width: 769px)">
   </head>
   <body>
     <svg style="display: none;">
@@ -54,7 +63,10 @@
       <nav class="navbar">
         <a href="#hero" class="logo-link">
           <div class="logo">
-           <img src="assets/DWDaltlogo4.png" alt="Denver West Diesel Logo" />
+           <img src="assets/web/DWDaltlogo4.png" 
+                srcset="assets/mobile/DWDaltlogo4.png 300w, assets/web/DWDaltlogo4.png 400w"
+                sizes="(max-width: 768px) 300px, 400px"
+                alt="Denver West Diesel Logo" />
           </div>
         </a>
         <ul class="nav-links">
@@ -128,7 +140,11 @@
         <div class="about-container reveal">
           <h2 class="reveal">Our Story</h2>
           <div class="about-image reveal">
-            <img src="assets/DWDTeamEdit.png" alt="Denver West Diesel Team">
+            <picture>
+              <source media="(max-width: 768px)" srcset="assets/mobile/DWDTeamEdit.webp" type="image/webp">
+              <source media="(min-width: 769px)" srcset="assets/web/DWDTeamEdit.webp" type="image/webp">
+              <img src="assets/web/DWDTeamEdit.webp" alt="Denver West Diesel Team" loading="lazy">
+            </picture>
           </div>
           <div class="about-text">
             <p>Denver West Diesel was founded in 2014 by Chris and Stacie Bagley with a simple mission: to build a diesel repair shop that truly values the people turning the wrenches. As a lifelong mechanic, Chris knew firsthand how demanding and skilled the work is. He wanted to create a space where mechanics are respected, supported, and empowered to do their best work.</p>

@@ -243,7 +243,7 @@ a {
 
 /* Hero Section */
 #hero {
-  background: url("assets/open_hoods.jpg") no-repeat center center/cover;
+  background: url("assets/web/open_hoods.webp") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -252,6 +252,13 @@ a {
   position: relative;
   padding-top: 10rem;
   transition: background-image 0.5s ease;
+}
+
+/* Responsive hero background images for mobile */
+@media (max-width: 768px) {
+  #hero {
+    background-image: url("assets/mobile/open_hoods.webp");
+  }
 }
 
 #hero::before {

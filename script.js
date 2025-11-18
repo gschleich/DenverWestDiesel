@@ -3,31 +3,54 @@ document.addEventListener('DOMContentLoaded', function() {
     const topBar = document.querySelector('.top-bar');
 
     const hero = document.getElementById('hero');
-    const heroImages = [
-        'assets/open_hoods.jpg',
-        'assets/white_truck.jpg',
-        'assets/trucks_side.jpg',
-        'assets/shop_vehicles.jpg',
-        'assets/Mechanical1.png',
-        'assets/Mechanical2.png',
-        'assets/Mechanical3.png',
-        'assets/Mechanical4.png',
-        'assets/Mechanical5.png'
+    // Base image names (without path/extension)
+    const heroImageNames = [
+        'open_hoods',
+        'white_truck',
+        'trucks_side',
+        'shop_vehicles',
+        'Mechanical1',
+        'Mechanical2',
+        'Mechanical3',
+        'Mechanical4',
+        'Mechanical5'
     ];
     let currentImageIndex = 0;
     let imagesLoaded = 0;
 
+    // Detect if mobile device
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    // Get responsive image path
+    function getImagePath(imageName) {
+        const basePath = isMobile() ? 'assets/mobile' : 'assets/web';
+        return `${basePath}/${imageName}.webp`;
+    }
+
     // Preload all hero images to prevent blank flashes
     function preloadImages() {
-        heroImages.forEach((imageSrc, index) => {
-            const img = new Image();
-            img.onload = () => {
+        heroImageNames.forEach((imageName) => {
+            // Preload both mobile and web versions
+            const mobileImg = new Image();
+            const webImg = new Image();
+            
+            mobileImg.onload = () => {
                 imagesLoaded++;
-                if (imagesLoaded === heroImages.length) {
+                if (imagesLoaded === heroImageNames.length * 2) {
                     console.log('All hero images preloaded successfully');
                 }
             };
-            img.src = imageSrc;
+            webImg.onload = () => {
+                imagesLoaded++;
+                if (imagesLoaded === heroImageNames.length * 2) {
+                    console.log('All hero images preloaded successfully');
+                }
+            };
+            
+            mobileImg.src = `assets/mobile/${imageName}.webp`;
+            webImg.src = `assets/web/${imageName}.webp`;
         });
     }
 
@@ -35,9 +58,20 @@ document.addEventListener('DOMContentLoaded', function() {
     preloadImages();
 
     function changeHeroImage() {
-        currentImageIndex = (currentImageIndex + 1) % heroImages.length;
-        hero.style.backgroundImage = `url(${heroImages[currentImageIndex]})`;
+        currentImageIndex = (currentImageIndex + 1) % heroImageNames.length;
+        const imagePath = getImagePath(heroImageNames[currentImageIndex]);
+        hero.style.backgroundImage = `url(${imagePath})`;
     }
+
+    // Update image path on window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const imagePath = getImagePath(heroImageNames[currentImageIndex]);
+            hero.style.backgroundImage = `url(${imagePath})`;
+        }, 250);
+    });
 
     // Start carousel after a short delay to ensure images are preloaded
     setTimeout(() => {
