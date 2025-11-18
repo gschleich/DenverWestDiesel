@@ -1,0 +1,14 @@
+/**
+ * Configuration File Template
+ * 
+ * INSTRUCTIONS:
+ * 1. Copy this file and rename it to "config.js" (without .example)
+ * 2. Replace the placeholder with your actual Google Apps Script Web App URL
+ * 3. The config.js file is already in .gitignore and will NOT be committed to git
+ * 4. Keep your actual config.js file private and never commit it
+ */
+
+// Your Google Apps Script Web App URL
+// Get this from: Deploy > Manage deployments > Copy Web App URL
+const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+

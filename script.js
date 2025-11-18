@@ -294,15 +294,22 @@ function setupTestimonialCarousel() {
 }
 setupTestimonialCarousel();
 
-/* Supabase Form Submission */
-const supabaseUrl = 'https://frtpfvfnajkpdiwhwbvy.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZydHBmdmZuYWprcGRpd2h3YnZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMyMDMyMDQsImV4cCI6MjA2ODc3OTIwNH0.zGGeiiArmks51rT7-dFZGuDcDZIKZn_WHUOqyDlBY1Q';
-
-const { createClient } = supabase;
-const supabaseClient = createClient(supabaseUrl, supabaseKey);
-
+/* Google Sheets Form Submission */
 const quoteForm = document.getElementById('quote-form');
 const submitButton = quoteForm.querySelector('button[type="submit"]');
+
+// IMPORTANT: The Google Script URL is loaded from config.js (which is NOT committed to git)
+// If GOOGLE_SCRIPT_URL is not defined, show an error
+if (typeof GOOGLE_SCRIPT_URL === 'undefined' || GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+    console.error('ERROR: GOOGLE_SCRIPT_URL is not configured. Please create config.js from config.js.example');
+    // Disable form submission if config is missing
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Form is not properly configured. Please contact the website administrator.');
+        });
+    }
+}
 
 quoteForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -312,30 +319,37 @@ quoteForm.addEventListener('submit', async (event) => {
 
     const formInputs = quoteForm.elements;
     const formData = {
-        first_name: formInputs['first-name'].value,
-        last_name: formInputs['last-name'].value,
-        phone_number: formInputs['phone'].value,
+        firstName: formInputs['first-name'].value,
+        lastName: formInputs['last-name'].value,
+        phone: formInputs['phone'].value,
         email: formInputs['email'].value,
-        vehicle_make: formInputs['make'].value,
-        vehicle_model: formInputs['model'].value,
-        vehicle_year: formInputs['year'].value,
+        make: formInputs['make'].value,
+        model: formInputs['model'].value,
+        year: formInputs['year'].value,
         vin: formInputs['vin'].value,
-        engine_serial_number: formInputs['engine-serial'].value,
-        problem_description: formInputs['problem'].value,
-        other_information: formInputs['other'].value,
+        engineSerial: formInputs['engine-serial'].value,
+        problem: formInputs['problem'].value,
+        other: formInputs['other'].value,
+        timestamp: new Date().toISOString()
     };
 
-    const { data, error } = await supabaseClient
-        .from('quotes')
-        .insert([formData]);
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
 
-    if (error) {
-        console.error('Error submitting quote:', error);
-        alert('There was an error submitting your quote. Please try again.');
-    } else {
-        console.log('Quote submitted successfully:', data);
+        // Since we're using no-cors mode, we can't check the response status
+        // But if no error is thrown, assume success
         alert('Thank you for your submission! We will get back to you as soon as possible.');
         quoteForm.reset();
+    } catch (error) {
+        console.error('Error submitting quote:', error);
+        alert('There was an error submitting your quote. Please try again or contact us directly.');
     }
 
     submitButton.textContent = originalButtonText;
