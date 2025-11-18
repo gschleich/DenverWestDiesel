@@ -1,5 +1,5 @@
 # Sensitive configuration files - DO NOT COMMIT
-config.js
+# config.js - Now committed for easier deployment (URL is already public client-side)
 
 # OS files
 .DS_Store
