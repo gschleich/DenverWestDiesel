@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denver West Diesel</title>
+    <link rel="icon" type="image/png" href="../../assets/web/DenverD.png">
+    <link rel="apple-touch-icon" href="../../assets/web/DenverD.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Hidden Google logo symbol -->
+    <svg style="display: none;">
+      <symbol id="google-logo" viewBox="0 0 48 48">
+        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.82l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+        <path fill="none" d="M0 0h48v48H0z"></path>
+      </symbol>
+    </svg>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <a class="top-item" href="https://www.google.com/maps/search/?api=1&query=Denver+West+Diesel" target="_blank" rel="noopener">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="top-full">150 W 60th Pl #2, Denver, CO 80216</span>
+                <span class="top-short">Address</span>
+            </a>
+            <a class="top-item" href="tel:720-272-6585">
+                <i class="fas fa-phone-alt"></i>
+                <span>(720) 272-6585</span>
+            </a>
+            <span class="top-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Fri: 6AM - 6PM</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <a href="#hero" class="logo-link">
+                <span class="logo-plate">
+                    <img src="../../assets/web/DWDaltlogo4.png" alt="Denver West Diesel logo">
+                </span>
+                <span class="logo-text">DENVER WEST DIESEL</span>
+            </a>
+            <div class="nav-links">
+                <a href="#hero">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#location-contact">CONTACT</a>
+                <a href="#contact" class="btn-quote-nav"><span class="bracket-l">[</span> Get a Quote <span class="bracket-r">]</span></a>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ MOBILE NAV ============ -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-head">
+            <span class="mono-label">// NAVIGATION</span>
+        </div>
+        <a href="#hero"><span class="mono-idx">01</span> HOME</a>
+        <a href="#about"><span class="mono-idx">02</span> ABOUT</a>
+        <a href="#services"><span class="mono-idx">03</span> SERVICES</a>
+        <a href="#location-contact"><span class="mono-idx">04</span> CONTACT</a>
+        <a href="#contact" class="mobile-quote">GET A QUOTE</a>
+    </div>
+    <div class="overlay"></div>
+
+    <!-- ============ HERO ============ -->
+    <header id="hero">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-vignette"></div>
+        <div class="container hero-inner">
+            <div class="hero-eyebrow">
+                <span class="mono-label">// DIESEL DIAGNOSTICS &amp; REPAIR</span>
+            </div>
+            <h1>DENVER WEST DIESEL</h1>
+            <p class="hero-sub">Your one-stop shop for diesel services!</p>
+            <div class="hero-cta-frame">
+                <span class="corner tl"></span>
+                <span class="corner tr"></span>
+                <span class="corner bl"></span>
+                <span class="corner br"></span>
+                <a href="#services" class="btn-primary">Our Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="hero-meta container">
+            <span class="mono-label">EST. 2014</span>
+            <span class="mono-label">DENVER, CO</span>
+            <span class="mono-label">ASE CERTIFIED</span>
+        </div>
+    </header>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section id="why-us" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-label">// 01 &mdash; WHY US</span>
+                <h2>Why Choose Us?</h2>
+                <span class="rule-line"></span>
+            </div>
+            <div class="spec-grid">
+                <div class="spec-card reveal">
+                    <span class="spec-idx">001</span>
+                    <i class="fas fa-users"></i>
+                    <h3>Family-owned &amp; Operated</h3>
+                </div>
+                <div class="spec-card reveal">
+                    <span class="spec-idx">002</span>
+                    <i class="fas fa-truck"></i>
+                    <h3>Light, Medium, &amp; Heavy Duty</h3>
+                </div>
+                <div class="spec-card reveal">
+                    <span class="spec-idx">003</span>
+                    <i class="fas fa-truck-moving"></i>
+                    <h3>All Fleet Services</h3>
+                </div>
+                <div class="spec-card reveal">
+                    <span class="spec-idx">004</span>
+                    <i class="fas fa-certificate"></i>
+                    <h3>ASE Certified Mechanics</h3>
+                </div>
+                <div class="spec-card reveal">
+                    <span class="spec-idx">005</span>
+                    <i class="fas fa-award"></i>
+                    <h3>We Stand Behind Our Work</h3>
+                </div>
+                <div class="spec-card reveal">
+                    <span class="spec-idx">006</span>
+                    <i class="fas fa-check-circle"></i>
+                    <h3>BBB Accredited Since 2018</h3>
+                </div>
+                <div class="spec-card reveal">
+                    <span class="spec-idx">007</span>
+                    <i class="fas fa-percent"></i>
+                    <h3>Enjoy Our 4.75% Sales Tax</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="about-media reveal">
+                <span class="corner tl"></span>
+                <span class="corner br"></span>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="../../assets/mobile/DWDTeamEdit.webp">
+                    <img src="../../assets/web/DWDTeamEdit.webp" alt="The Denver West Diesel team in the shop bay">
+                </picture>
+                <span class="media-tag mono-label">FIG.01 / THE TEAM</span>
+            </div>
+            <div class="about-content reveal">
+                <span class="mono-label">// 02 &mdash; OUR STORY</span>
+                <h2>Our Story</h2>
+                <span class="rule-line"></span>
+                <p>Denver West Diesel was founded in 2014 by Chris and Stacie Bagley with a simple mission: to build a diesel repair shop that truly values the people turning the wrenches. As a lifelong mechanic, Chris knew firsthand how demanding and skilled the work is. He wanted to create a space where mechanics are respected, supported, and empowered to do their best work.</p>
+                <div id="more-text" class="more-text">
+                    <p>What started as a vision to work with purpose and pride has grown into a trusted family-owned business rooted in hard work, integrity, and a genuine passion for the diesel industry. From day one we have focused on delivering high-quality diagnostics, repairs, and service the kind we would want for our own vehicles.</p>
+                    <p>Denver West Diesel has set the standard for excellence in diesel engine maintenance and repair. Our highly skilled technicians leverage years of experience and cutting-edge diagnostics to provide a full spectrum of services, from routine fleet care to intricate custom projects. Conveniently located just minutes from downtown, we are committed to delivering superior results and exceptional service that keeps your operations running at peak performance.</p>
+                    <p>At Denver West Diesel, we take pride in building lasting relationships with the people we serve. Whether you're managing a fleet, running your own shop, or keeping your personal diesel pickup in top shape, you can count on us for honest advice, expert service, and dependable results. When you bring your vehicle to us, you're not just a customer, you're part of our community.</p>
+                </div>
+                <button id="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOUNDATIONAL MESSAGE ============ -->
+    <section id="foundational-message" class="section">
+        <div class="container">
+            <div class="pull-quote reveal">
+                <span class="corner tl"></span>
+                <span class="corner tr"></span>
+                <span class="corner bl"></span>
+                <span class="corner br"></span>
+                <span class="quote-mark">"</span>
+                <blockquote>
+                    At Denver West Diesel we know what it means to fix it right, not just quickly. With full in-shop transmission and gear rebuild capabilities, custom fabrication, and a team built from within the diesel industry, we provide a level of depth and trust you won't find in mobile-only operations.
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-label">// 03 &mdash; CAPABILITIES</span>
+                <h2>Our Services</h2>
+                <span class="rule-line"></span>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item reveal">
+                    <button class="accordion-header">
+                        <span class="acc-badge"><i class="fas fa-screwdriver-wrench"></i></span>
+                        <span class="acc-title"><span class="acc-num">S-01</span>Engine Diagnostics &amp; Repair</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>At Denver West Diesel, we specialize in advanced engine diagnostics and repair using state-of-the-art equipment and technology. Our shop is fully equipped with the latest tools to accurately identify issues and get to the root of the problem quickly and efficiently. Whether it's a check engine light, performance concern, or something just doesn't feel right, our experienced technicians have the knowledge and resources to handle it. From routine repairs to complex engine work, we deliver precise solutions that keep your diesel vehicle running strong and dependable.</p>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <button class="accordion-header">
+                        <span class="acc-badge"><i class="fas fa-cogs"></i></span>
+                        <span class="acc-title"><span class="acc-num">S-02</span>Transmissions and Gear Shop</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Denver West Diesel is fully equipped with an in-house transmission and gear shop, offering everything from full rebuilds to new installations. Whether you're dealing with slipping, grinding, or complete failure, our experienced technicians can diagnose the issue and provide a solution that fits your needs. We carry a selection of rebuilt and new transmissions and differentials, and we also offer custom rebuilds for specific applications. Need parts? We've got those too. Whether it's repair, replacement, or parts sales, we're your one-stop shop for transmission and gear work that gets you back on the road with confidence.</p>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <button class="accordion-header">
+                        <span class="acc-badge"><i class="fas fa-truck-moving"></i></span>
+                        <span class="acc-title"><span class="acc-num">S-03</span>Vocational Equipment</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Denver West Diesel provides expert diagnostic and repair services for vocational trucks and equipment. Our team is trained to work with a wide range of vocational systems including utility trucks, dump trucks, construction vehicles, and other specialized diesel-powered equipment. Our team has extensive experience collaborating with leading body manufacturers, giving us in-depth knowledge of various systems and configurations. We can quickly identify faults and perform accurate, efficient repairs. We understand how critical these vehicles are to your business, which is why we focus on minimizing downtime and ensuring every repair is done right the first time. Whether it's electrical, hydraulic, or drivability issues, we've got the experience and equipment to get your vocational fleet back to work.</p>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <button class="accordion-header">
+                        <span class="acc-badge"><i class="fas fa-shield-alt"></i></span>
+                        <span class="acc-title"><span class="acc-num">S-04</span>Preventative Maintenance</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Staying ahead of costly repairs starts with preventative maintenance, and Denver West Diesel makes it easy to keep your vehicles running at their best. We work with you to create a customized maintenance schedule based on your fleet's needs, usage, and manufacturer recommendations. From fluid checks and filter changes to comprehensive inspections, our goal is to catch small issues before they turn into big problems. Regular service not only extends the life of your equipment but also helps improve performance, reliability, and safety on the road. Let us help you stay proactive so your trucks stay in top condition and your business keeps moving forward.</p>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <button class="accordion-header">
+                        <span class="acc-badge"><i class="fas fa-caravan"></i></span>
+                        <span class="acc-title"><span class="acc-num">S-05</span>RVs &amp; Motorhomes</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Whether you're out of warranty, having trouble finding parts, or just need reliable service, Denver West Diesel is here to keep your RV or motorhome road-ready. We understand the unique challenges that come with maintaining larger vehicles and older models, and our team has the tools and experience to troubleshoot, repair, and even fabricate custom solutions when needed. From engine diagnostics to full-system repairs, we're committed to finding a way to get you back on the road safely and with confidence. Your journey matters to us, and we'll do what it takes to keep it moving.</p>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <button class="accordion-header">
+                        <span class="acc-badge"><i class="fas fa-tractor"></i></span>
+                        <span class="acc-title"><span class="acc-num">S-06</span>Power Equipment</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>At Denver West Diesel, we also specialize in the service and repair of diesel-powered equipment beyond the road. From generators and compressors to skid steers and other heavy-duty power equipment, our technicians are equipped to handle a wide range of machinery. We use advanced diagnostics and industry expertise to ensure your equipment is running efficiently and reliably. Whether it's routine maintenance or a major repair, we understand how essential this equipment is to your operation and work hard to get it back in service quickly and correctly.</p>
+                    </div>
+                </div>
+                <div class="accordion-item reveal">
+                    <button class="accordion-header">
+                        <span class="acc-badge"><i class="fas fa-bolt"></i></span>
+                        <span class="acc-title"><span class="acc-num">S-07</span>Electrical Troubleshooting</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Electrical issues can be some of the most frustrating and complex problems to diagnose, but at Denver West Diesel, we're equipped to handle them with precision and expertise. Our technicians use advanced diagnostic tools and deep industry knowledge to trace wiring issues, sensor failures, battery problems, and more. Whether it's a flickering light, a dead start, or an intermittent fault that's hard to pin down, we take the time to get to the root of the issue and fix it right. No guesswork &mdash; just accurate, reliable repairs that restore your vehicle's performance and dependability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-label">// 04 &mdash; FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <span class="rule-line"></span>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <span class="faq-q-idx">Q.01</span>
+                    <h3>What types of vehicles do you service?</h3>
+                    <p>We specialize in diesel-powered vehicles, including pickup trucks, vocational trucks, RVs, motorhomes, and commercial fleet vehicles. We also work on power equipment and machinery.</p>
+                </div>
+                <div class="faq-item reveal">
+                    <span class="faq-q-idx">Q.02</span>
+                    <h3>Do you offer diagnostics even if another shop can't figure it out?</h3>
+                    <p>Yes. We use state-of-the-art diagnostic equipment and advanced software to pinpoint issues that other shops may miss. We frequently help customers who have been chasing a problem without answers.</p>
+                </div>
+                <div class="faq-item reveal">
+                    <span class="faq-q-idx">Q.03</span>
+                    <h3>Can you rebuild or replace my transmission?</h3>
+                    <p>Absolutely. We have an in-house transmission and gear shop. We offer rebuilds, new installations, and a selection of ready-to-go units and replacement parts.</p>
+                </div>
+                <div class="faq-item reveal">
+                    <span class="faq-q-idx">Q.04</span>
+                    <h3>What if I can't find parts for my older RV or truck?</h3>
+                    <p>No problem. Our team specializes in hard-to-source and discontinued parts. We can often fabricate or custom-fit components to get you back on the road.</p>
+                </div>
+                <div class="faq-item reveal">
+                    <span class="faq-q-idx">Q.05</span>
+                    <h3>Do you work with fleets?</h3>
+                    <p>Yes. We provide customized fleet maintenance programs, diagnostics, and repair services to keep your vehicles running smoothly with minimal downtime.</p>
+                </div>
+
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.06</span>
+                    <h3>Do you perform DOT inspections?</h3>
+                    <p>Yes, we are certified to perform DOT inspections and help ensure your vehicle meets all compliance and safety requirements.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.07</span>
+                    <h3>Do you sell diesel parts?</h3>
+                    <p>Yes. We stock and source a variety of OEM and aftermarket diesel parts. Whether you need a replacement or a hard-to-find component, we can help.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.08</span>
+                    <h3>Can I schedule preventative maintenance?</h3>
+                    <p>Yes. We can set up a maintenance schedule tailored to your vehicle's usage and needs. This helps prevent breakdowns and keeps your vehicle in top condition.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.09</span>
+                    <h3>What is your turnaround time for repairs?</h3>
+                    <p>Turnaround time depends on the complexity of the job and part availability. We're known for fast, efficient service and always keep you updated throughout the process.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.10</span>
+                    <h3>Where are you located?</h3>
+                    <p>We are conveniently located just minutes from downtown Denver, with easy access for both local and regional customers.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.11</span>
+                    <h3>What kind of diagnostic equipment do you use?</h3>
+                    <p>We use industry-leading, state-of-the-art diagnostic tools that allow us to read and interpret data across a wide range of diesel systems and manufacturers. This helps us pinpoint issues faster and with greater accuracy.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.12</span>
+                    <h3>Can you work with my extended warranty or service contract?</h3>
+                    <p>Yes. We're happy to work with most extended warranty companies. Let us know your coverage details and we'll help guide the process.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.13</span>
+                    <h3>Do you offer towing or roadside assistance?</h3>
+                    <p>While we do not offer towing in-house, we can recommend trusted partners in the area and coordinate with them to get your vehicle to our shop as quickly as possible.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.14</span>
+                    <h3>How do I schedule an appointment?</h3>
+                    <p>You can call us directly, use our online contact form, or stop by the shop. We're flexible and do our best to accommodate urgent needs when possible.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.15</span>
+                    <h3>What are your hours of operation?</h3>
+                    <p>We are open Monday&ndash;Friday, 6 a.m. to 6 p.m. We offer a secure after-hours drop-off, just give us a call ahead of time and we'll walk you through the process.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.16</span>
+                    <h3>Do you work on gasoline vehicles?</h3>
+                    <p>We specialize in diesel systems, but depending on the issue and the vehicle, we may be able to help. Give us a call and we'll let you know what we can do.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.17</span>
+                    <h3>How do you handle custom work or modifications?</h3>
+                    <p>We're experienced in custom fabrication, retrofits, and performance-related upgrades. If you have a specific project or need, we're happy to consult and build a plan that works for you.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.18</span>
+                    <h3>Can I drop off my vehicle after hours?</h3>
+                    <p>Yes. We offer a secure after-hours drop-off. Just give us a call ahead of time and we'll walk you through the process.</p>
+                </div>
+                <div class="faq-item" data-faq-hidden>
+                    <span class="faq-q-idx">Q.19</span>
+                    <h3>Are you ASE certified?</h3>
+                    <p>Yes. Our technicians are ASE certified and undergo ongoing training to stay current with the latest technology and industry standards.</p>
+                </div>
+            </div>
+            <div class="faq-more-wrap">
+                <button id="show-more-faq">Show More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-label">// 05 &mdash; FIELD REPORTS</span>
+                <h2>What Our Customers Say</h2>
+                <span class="rule-line"></span>
+            </div>
+            <div class="testimonial-carousel-wrapper reveal">
+                <button class="carousel-arrow prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-viewport">
+                    <div class="testimonial-container">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Tony</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>Always above and beyond excellent service! Lower than the big guys, and they seem to really give the trucks a good once over to find other issues or problems that may exist or occur! Thanks To Brandon, Lucky, Chris, and the rest of the team!</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Kepha</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>These guys are awesome. Chris and Zach were extremely helpful, knowledgeable, and expedient in their services. All the gents were top notch in service and experience. Highly recommend!</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Jo</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>As a female traveling in my short skoolie with my 10 year-old son, it was important I felt comfortable with the shop, the staff, and the location. Denver West checked all the boxes, I got my skoolie in top shape, and they did it quickly and for a fair price.</p></blockquote>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Bo</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>The best in Denver</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">John</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>Very competent and friendly staff - highly recommend</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Joseph</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>Great people Great place to have any work done on your truck</p></blockquote>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">CALMAR TRANSPORT INC.</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>Highly Professional services offered at very reasonable price. Got our truck fixed even before the promised time. Extremely satisfied with the repairs and overall services.</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Daniel</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>The only place I take my truck for routine maintenance or problems. The team at DWD is honest and reliable; sourcing parts and diagnosing problems other shops missed. Specializing in heavy trucks but knowledge encompasses anything with an engine. Chris and his team deliver!</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Chuck</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>&ldquo;We under promise and over deliver&rdquo; should be their slogan! Price, quality, and customer service all come together for an end product you don't see in this industry. My drivers will only use this shop.</p></blockquote>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Gretchen</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>Chris and his team a Denver West Diesel are nothing short of amazing. When our teen crashed her car and basically totaled it with suspension damage, Chris was able to find the parts to salvage the vehicle and made extra sure it was going to be safe for future use. DWD does exceptional work in a very timely fashion!</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Brian</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>Top notch Heavy Duty and medium duty repair shop. They have worked my class 8 trucks to HD 1-tons. They are fast, do the repairs right the first time. Recently lost an engine, had us back up running with in 10 days. They understand if equipment is down, the company is losing revenue.</p></blockquote>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-author">
+                                    <span class="testimonial-icon"><svg><use xlink:href="#google-logo"></use></svg></span>
+                                    <div class="author-meta">
+                                        <span class="author-name">Cassie</span>
+                                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <blockquote><p>I trust no other shop! Chris really cares about quality and makes sure the job gets done at a decent price. He knows so much about cars, trucks, and rigs that I feel very confident that the job will be done right. Chris is great at explaining what's wrong and what the cost will be. Seriously. Don't go anywhere else!</p></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LOCATION & CONTACT ============ -->
+    <section id="location-contact" class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-label">// 06 &mdash; LOCATION</span>
+                <h2>Contact Us</h2>
+                <span class="rule-line"></span>
+            </div>
+            <div class="contact-grid reveal">
+                <div class="map-frame">
+                    <span class="corner tl"></span>
+                    <span class="corner br"></span>
+                    <iframe src="https://maps.google.com/maps?q=Denver%20West%20Diesel&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Denver West Diesel location" loading="lazy"></iframe>
+                </div>
+                <div class="contact-info">
+                    <div class="info-row">
+                        <span class="info-badge"><i class="fas fa-map-marker-alt"></i></span>
+                        <div>
+                            <span class="mono-label">ADDRESS</span>
+                            <p>150 W 60th Pl #2, Denver, CO 80216</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-badge"><i class="fas fa-phone-alt"></i></span>
+                        <div>
+                            <span class="mono-label">PHONE</span>
+                            <p><a href="tel:720-272-6585">(720) 272-6585</a></p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-badge"><i class="fas fa-envelope"></i></span>
+                        <div>
+                            <span class="mono-label">EMAIL</span>
+                            <p><a href="mailto:denverwestdiesel@gmail.com">denverwestdiesel@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-badge"><i class="fas fa-clock"></i></span>
+                        <div>
+                            <span class="mono-label">HOURS</span>
+                            <p>Mon - Fri: 6AM - 6PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ QUOTE FORM ============ -->
+    <section id="contact" class="section quote-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="mono-label">// 07 &mdash; REQUEST</span>
+                <h2>DWD Quote Form</h2>
+                <span class="rule-line"></span>
+            </div>
+            <p class="quote-intro reveal">Please complete the following information to request a quote from Denver West Diesel. Quote is subject to change. For better quote accuracy we may ask you to bring your vehicle into the shop for further diagnosis.</p>
+            <form id="quote-form" class="reveal">
+                <fieldset>
+                    <legend><span class="mono-label">// YOUR INFORMATION</span></legend>
+                    <div class="form-grid two-col">
+                        <div class="field">
+                            <label for="first-name">First Name <span class="req">*</span></label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="field">
+                            <label for="last-name">Last Name <span class="req">*</span></label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone Number <span class="req">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email <span class="req">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><span class="mono-label">// VEHICLE INFORMATION</span></legend>
+                    <div class="form-grid three-col">
+                        <div class="field">
+                            <label for="make">Make <span class="req">*</span></label>
+                            <input type="text" id="make" name="make" required>
+                        </div>
+                        <div class="field">
+                            <label for="model">Model <span class="req">*</span></label>
+                            <input type="text" id="model" name="model" required>
+                        </div>
+                        <div class="field">
+                            <label for="year">Year of Manufacture <span class="req">*</span></label>
+                            <input type="text" id="year" name="year" required>
+                        </div>
+                    </div>
+                    <div class="form-grid two-col">
+                        <div class="field">
+                            <label for="vin">VIN <span class="opt">(optional)</span></label>
+                            <input type="text" id="vin" name="vin">
+                        </div>
+                        <div class="field">
+                            <label for="engine-serial">Engine Serial Number <span class="opt">(optional)</span></label>
+                            <input type="text" id="engine-serial" name="engine-serial">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="problem">Problem Description (Service Needed) <span class="req">*</span></label>
+                        <textarea id="problem" name="problem" rows="4" required></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="other">Other <span class="opt">(optional)</span></label>
+                        <textarea id="other" name="other" rows="3"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn-primary submit-btn">GET A QUOTE <i class="fas fa-arrow-right"></i></button>
+                <p class="quote-outro">We may contact you in order to gather more information about your quote.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-line"></span>
+            <p>&copy; 2025 Denver West Diesel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top-btn" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
